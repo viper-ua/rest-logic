@@ -1,0 +1,22 @@
+restaurant:
+	name:
+	has_many: tables
+	has_many: reservations, through: :tables
+	has_many: schedules
+
+table:
+	name:
+	belongs_to: restaurant, index
+	has_many: reservations
+
+reservation:
+	belongs_to: table, index
+	time_from:
+	time_to:
+
+timetable:
+	belongs_to: restaurant, index
+	day:
+	time_open:
+	time_close: 
+

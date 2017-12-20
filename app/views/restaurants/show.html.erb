@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>
+
+<p>
+<table>
+  <thead>
+    <tr>
+      <th>Table name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @restaurant.tables %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Table', new_table_path(restaurant_id: @restaurant.id) %>
+</p>

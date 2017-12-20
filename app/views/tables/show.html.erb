@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Table Name:</strong>
+  <%= @table.name %>
+</p>
+<p>
+  <table>
+  <thead>
+    <tr>
+      <th>Reservations:</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render @table.reservations %>
+  </tbody>
+</table>
+</p>
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

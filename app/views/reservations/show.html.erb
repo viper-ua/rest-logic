@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @reservation.table.restaurant.name %>
+</p>
+
+<p>
+  <strong>Table:</strong>
+  <%= @reservation.table.name %>
+</p>
+
+<p>
+  <strong>Time from:</strong>
+  <%= @reservation.time_from.strftime('%H:%M %d-%b-%y') %>
+</p>
+
+<p>
+  <strong>Time to:</strong>
+  <%= @reservation.time_to.strftime('%H:%M %d-%b-%y') %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>
